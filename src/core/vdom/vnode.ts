@@ -67,7 +67,7 @@ export default class VNode {
     this.isOnce = false
     this.asyncFactory = asyncFactory
     this.asyncMeta = undefined
-    this.isAsyncPlaceholder = false
+    this.isAsyncPlaceholder = false    
   }
 
   // DEPRECATED: alias for componentInstance for backwards compat.
@@ -77,14 +77,19 @@ export default class VNode {
   }
 }
 
+// 创建一个空节点
 export const createEmptyVNode = (text: string = '') => {
-  const node = new VNode()
+  console.log(text,111);
+  
+  const node = new VNode()  
   node.text = text
   node.isComment = true
   return node
 }
 
+// 创建一个文本节点
 export function createTextVNode(val: string | number) {
+  console.log(`我就是按钮使用createTextVNode传入的val:${val}`);
   return new VNode(undefined, undefined, undefined, String(val))
 }
 
@@ -92,6 +97,7 @@ export function createTextVNode(val: string | number) {
 // used for static nodes and slot nodes because they may be reused across
 // multiple renders, cloning them avoids errors when DOM manipulations rely
 // on their elm reference.
+// 克隆一个节点
 export function cloneVNode(vnode: VNode): VNode {
   const cloned = new VNode(
     vnode.tag,

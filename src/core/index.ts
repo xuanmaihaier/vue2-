@@ -5,7 +5,6 @@ import { FunctionalRenderContext } from 'core/vdom/create-functional-component'
 import { version } from 'v3'
 
 initGlobalAPI(Vue)
-
 Object.defineProperty(Vue.prototype, '$isServer', {
   get: isServerRendering
 })
