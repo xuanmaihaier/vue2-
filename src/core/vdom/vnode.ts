@@ -79,8 +79,6 @@ export default class VNode {
 
 // 创建一个空节点
 export const createEmptyVNode = (text: string = '') => {
-  console.log(text,111);
-  
   const node = new VNode()  
   node.text = text
   node.isComment = true
@@ -89,7 +87,7 @@ export const createEmptyVNode = (text: string = '') => {
 
 // 创建一个文本节点
 export function createTextVNode(val: string | number) {
-  console.log(`我就是按钮使用createTextVNode传入的val:${val}`);
+  // console.log(`我就是按钮使用createTextVNode传入的val:${val}`);
   return new VNode(undefined, undefined, undefined, String(val))
 }
 
@@ -99,6 +97,7 @@ export function createTextVNode(val: string | number) {
 // on their elm reference.
 // 克隆一个节点
 export function cloneVNode(vnode: VNode): VNode {
+  // console.log('cloneVNode：上面得哥们和我一样，所以走了我');
   const cloned = new VNode(
     vnode.tag,
     vnode.data,

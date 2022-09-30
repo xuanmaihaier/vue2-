@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../vue/dist/vue.js"></script>
+  <style>
+    textarea {
+      width: 100vw;
+      height: 90vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <template>
+      <div>
+        <!-- 我是注释 --> 
+      </div>
+      <textarea name="" id="" cols="30" rows="10">
+        <!-- /vue/src/core/vnode/vnode.ts 文件下的 VNode类 -->
+        this.tag // 当前节点标签名
+        this.data // 当前节点数据（VNodeData类型）
+        this.children // 当前节点子节点
+        this.text // 当前节点文本
+        this.elm // 当前节点对应的真实DOM节点
+        this.ns // 当前节点命名空间
+        this.context // 当前节点上下文
+        this.fnContext // 函数化组件上下文
+        this.fnOptions // 函数化组件配置项
+        this.fnScopeId // 函数化组件ScopeId
+        this.key // 子节点key属性
+        this.componentOptions // 组件配置项 
+        this.componentInstance // 组件实例
+        this.parent // 当前节点父节点
+        this.raw // 是否为原生HTML或只是普通文本
+        this.isStatic // 静态节点标志 keep-alive
+        this.isRootInsert // 是否作为根节点插入
+        this.isComment // 是否为注释节点
+        this.isCloned // 是否为克隆节点
+        this.isOnce // 是否为v-once节点
+        this.asyncFactory // 异步工厂方法 
+        this.asyncMeta // 异步Meta
+        this.isAsyncPlaceholder // 是否为异步占位
+        createEmptyVNode // 创建一个空节点 比如注释 <!-- 我是注释 --> 对应实例的对象只传入text: "我是注释", isComment: true
+        createTextVNode // 创建文本节点 比如 <p>我是文本</p> 对应实例的对象只传入text: "我是文本"
+        cloneVNode // 克隆节点
+      </textarea>
+    </template>
+  </div>
+  <script>
+    var example1 = new Vue({
+      el: '#app',
+      methods: {
+
+      },
+    })
+  </script>
+</body>
+
+</html>
